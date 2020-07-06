@@ -1,0 +1,3 @@
+#9 Alta produtividade: O Shell Script pode te ajudar a automatizar tarefas na linha de comando, te poupando tempo e esforço de fazer tarefas repetitivas.
+
+#9.1 Melhora a eficiência: O Shell Script poupa tempo de realizar tarefas repetidas vezes utilizando a automação de maneira rápida e eficaz.
