@@ -1,41 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="bootstrap.min.css">
-  <link rel="stylesheet" href="DatePickerX.min.css">
   <script src="jquery-3.5.1.min.js"></script>
   <script src="bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
 
 
   <title>Document</title>
 </head>
+
 <body>
   <div class="container">
-    <form action="" method="POST" id="form">  
+    <form action="" method="POST" id="form">
       <fieldset>
         <legend>Dados pessoais</legend>
+        <!-- Nome -->
         <div class="form-group" class="name">
           <label for="">Nome</label>
-          <input class="form-control" type="text" id="nome" name="name" maxlength="40" required="required" placeholder="Digite seu nome">
-        </div> 
+          <input class="form-control" type="text" id="nome" name="name" maxlength="40" required="required"
+            placeholder="Digite seu nome">
+        </div>
+        <!-- Email -->
         <div class="form-group" class="email">
           <label for="">E-mail</label>
-          <input class="form-control" type="text" id="email" name="email" maxlength="50" required="required" placeholder="Digite seu e-mail">
+          <input class="form-control" type="text" id="email" name="email" maxlength="50" required="required"
+            placeholder="Digite seu e-mail">
         </div>
+        <!-- Cpf -->
         <div class="form-group" class="cpf">
           <label for="">CPF</label>
-          <input class="form-control" type="text" name="cpf" maxlength="11" required="required" placeholder="Digite seu CPF">
+          <input class="form-control" type="text" name="cpf" maxlength="11" required="required"
+            placeholder="Digite seu CPF">
         </div>
+        <!-- Endereço -->
         <div class="form-group">
           <label for="">Endereço</label>
-          <input class="form-control" type="text" name="address" maxlength="200" required="required" placeholder="Digite seu endereço">
+          <input class="form-control" type="text" name="address" maxlength="200" required="required"
+            placeholder="Digite seu endereço">
         </div>
+        <!-- Cidade -->
         <div class="form-group">
           <label for="">Cidade</label>
-          <input class="form-control" type="text" name="city" maxlength="28" required="required" placeholder="Digite a sua cidade">
+          <input class="form-control" type="text" name="city" maxlength="28" required="required"
+            placeholder="Digite a sua cidade">
         </div>
+        <!-- Estado -->
         <div class="form-group">
           <label for="">Estado</label>
           <select class="form-control" name="states" id="states">
@@ -43,6 +57,7 @@
           </select>
         </div>
         <div class="form-group">
+          <!-- Tipo de moradia -->
           <p>Selecione o tipo de moradia</p>
           <label for="house">Casa</label>
           <input type="radio" name="house" id="house" value="house" required="required">
@@ -50,27 +65,43 @@
           <input type="radio" name="house" id="apartment" value="apartment" required="required">
         </div>
         <div class="form-group">
+          <!-- Resumo do currículo -->
           <label for="">Resumo do currículo</label>
-          <textarea class="form-control" name="abstract" id="abstract" cols="30" rows="10" maxlength="1000" required="required" placeholder="Digite o resumo do seu currículo"></textarea>
+          <textarea class="form-control" name="abstract" id="abstract" cols="30" rows="10" maxlength="1000"
+            required="required" placeholder="Digite o resumo do seu currículo"></textarea>
         </div>
         <div class="form-group">
+          <!-- Cargo -->
           <label for="">Cargo</label>
-          <input class="form-control" type="text" id="role" name="role" maxlength="40" required="required" placeholder="Digite seu cargo" placeholder="Digite o seu último cargo">
+          <input class="form-control" type="text" id="role" name="role" maxlength="40" required="required"
+            placeholder="Digite seu cargo" placeholder="Digite o seu último cargo">
         </div>
         <div class="form-group">
+          <!-- Descrição do cargo -->
           <label for="">Descrição do cargo</label>
-          <textarea class="form-control" name="description" id="description" cols="30" rows="10" maxlength="500" required="required" placeholder="Digite a descrição do seu último cargo"></textarea>
+          <textarea class="form-control" name="description" id="description" cols="30" rows="10" maxlength="500"
+            required="required" placeholder="Digite a descrição do seu último cargo"></textarea>
         </div>
         <div class="form-group">
+          <!-- Data de Início -->
           <label for="">Data de início</label>
-          <input class="form-control" type="date" id="start" name="start" value="01/01/1950" min="01/01/1900" max="31/07/2020" required="required">
-        </div>      
+          <input type="text" id="datepicker">
+          <!-- <input class="form-control" type="date" id="start" name="start" value="01/01/1950" min="01/01/1900" max="31/07/2020" required="required"> -->
+        </div>
       </fieldset>
-      <button class="btn btn-success">Enviar</button>
-      <input class="btn btn-danger" type="reset" value="Limpar campos">
+      <div class="buttons">
+        <button class="btn btn-success">Enviar</button>
+        <input class="btn btn-danger" type="reset" value="Limpar campos">
+      </div>
     </form>
   </div>
 
   <script src="script.js"></script>
+  <script src="pikaday.js"></script>
+  
+  <script>
+    var picker = new Pikaday({ field: document.getElementById('datepicker') });
+  </script>
 </body>
+
 </html>
