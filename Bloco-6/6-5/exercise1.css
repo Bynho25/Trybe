@@ -1,0 +1,71 @@
+body {
+
+}
+h1 {
+
+}
+h2 {
+
+}
+
+img {
+    max-width: 100%;
+}
+
+figure {
+    margin: 0;
+}
+
+@media screen and (max-width: 360px) {
+    p {
+      font-size: 12px;
+    }
+    h1 {
+      font-size: 15px;
+    }
+    img {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    background: gray;
+    margin: 10px;
+  }
+  p {
+    font-size: 18px;
+  }
+  .images {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+  }
+  .kittyCat {
+    border: 2px solid black;
+    margin: 10px;
+  }
+  figcaption {
+    text-align: center;
+  }
+}
+
+/* Altere a cor de fundo;
+
+Ajuste o tamanho da fonte;
+
+Ajuste as margens da página;
+
+Adicione a propriedade max-width à página, para garantir que a largura das linhas não fique muito grande. */
+
+@media screen and (min-width: 1300px) {
+  body {
+    background: pink;
+    font-size: 22px;
+    margin: 15px;
+    max-width: 1920px;
+  }
+}
