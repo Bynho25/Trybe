@@ -11,15 +11,15 @@ const fetchPromise = () => {
     const itemsToSquare = array.map((item) => item * item);
     const sumItems = itemsToSquare.reduce((result, number) => result + number);
     if(sumItems < 8000) {
-      resolve();
+      resolve(sumItems);
     } else {
-      reject();
+      reject(sumItems);
     }
   });
   myPromise
   .then((sumItems => [2, 3, 5, 10].map(number => sumItems / number)))
   .then((sumAgain) => sumAgain.reduce((acc, curr) => acc + curr))
-  .then((result) => console.log(result))
+  .then((result) => console.log(Math.floor(result)))
   .catch(() => console.log(`É mais de oito mil! Essa promise deve estar quebrada!`));
 };
 fetchPromise();
